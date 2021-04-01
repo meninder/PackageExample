@@ -5,7 +5,7 @@ from os import path
 here = path.abspath(path.dirname(__file__))
 
 with open(path.join(here, 'README.md'), encoding='utf-8') as f:
-    long_description = f.read() #TODO: create readme.md file, add this step into the readme
+    long_description = f.read()
 
 setup(
     name="package_example",
@@ -16,17 +16,13 @@ setup(
     author="Meninder Purewal",
     author_email='meninder.purewal@gmail.com',
     url='https://github.com/meninder/',
-    license="MIT", #TODO: add license, add step into README
+    license="MIT",
     packages=find_packages(exclude=('tests*', 'cli*', )),
-    entry_points= {
+    entry_points={
         'console_scripts': [
-            #'package_example = src.greeting:greet'
             'package_example = src.cli.cli_greeting:main'
         ]
     }
-
-    #install_requires=
-
 
 
 )
